@@ -1,0 +1,15 @@
+{
+  "name": "travisci-job-collector",
+  "version": "1.0.0",
+  "description": "An application designed to retrieve statistics for \"jobs\" run in the TravisCI continuous integration environment.",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "jshint src"
+  },
+  "author": "Mike Pennisi",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "jshint": "^2.9.4"
+  }
+}
