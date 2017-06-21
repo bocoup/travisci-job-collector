@@ -46,19 +46,22 @@ function writeFile(name, content) {
 function request(url) {
   return new Promise(function(resolve, reject) {
       var options = urlParse(url);
+      var request;
+
       options.headers = {'User-Agent': 'Node.js'};
 
-      var request = https.get(options, (res) => {
-         var body = '';
-         res.on('data', (chunk) => body += chunk);
-         res.on('end', () => {
-            try {
-              resolve(JSON.parse(body));
-            } catch (err) {
-              reject(err);
-            }
-          });
-       });
+      request = https.get(options, (res) => {
+          var body = '';
+
+          res.on('data', (chunk) => body += chunk);
+          res.on('end', () => {
+             try {
+               resolve(JSON.parse(body));
+             } catch (err) {
+               reject(err);
+             }
+           });
+        });
 
       request.on('error', reject);
     });
