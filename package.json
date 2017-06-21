@@ -10,6 +10,7 @@
   "license": "MIT",
   "private": true,
   "dependencies": {
-    "jshint": "^2.9.4"
+    "jshint": "^2.9.4",
+    "replay": "^2.1.2"
   }
 }
