@@ -53,6 +53,13 @@ function request(url) {
       request = https.get(options, (res) => {
           var body = '';
 
+          if (res.statusCode !== 200) {
+            reject(
+                new Error('Unexpected HTTP response status: ' + res.statusCode)
+              );
+            return;
+          }
+
           res.on('data', (chunk) => body += chunk);
           res.on('end', () => {
              try {
