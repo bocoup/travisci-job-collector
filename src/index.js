@@ -1,6 +1,5 @@
 'use strict';
 var path = require('path');
-var replay = require('replay');
 
 var auth = require('./auth');
 var formatCSV = require('./format-csv');
@@ -14,7 +13,11 @@ var args = {
     tokenFile: path.join(process.cwd(), '.gh-token')
   };
 
-replay.fixtures = args.cacheDir;
+try {
+  let replay = require('replay');
+  replay.fixtures = args.cacheDir;
+  replay.mode = 'record';
+} catch (_) {}
 
 var [low, high] = args.prRange.split('-')
   .map((num) => parseInt(num, 10));
