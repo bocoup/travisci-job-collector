@@ -1,7 +1,7 @@
 {
-  "name": "travisci-job-collector",
+  "name": "wpt-data-collector",
   "version": "1.0.0",
-  "description": "An application designed to retrieve statistics for \"jobs\" run in the TravisCI continuous integration environment.",
+  "description": "An application designed to retrieve statistics for pull requests made to the Web Platform Tests project.",
   "main": "src/index.js",
   "scripts": {
     "test": "jshint src"

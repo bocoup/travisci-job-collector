@@ -1,7 +1,7 @@
-# TravisCI Job Collector
+# WPT Data Collector
 
-An application designed to retrieve statistics for "jobs" run in the
-[TravisCI](https://travis-ci.org) continuous integration environment.
+An application designed to retrieve statistics for pull requests made to the
+[Web Platform Tests](https://github.com/w3c/web-platform-tests) project.
 
 ## Instructions
 
